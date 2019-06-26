@@ -1,0 +1,18 @@
+.top {
+  display: flex;
+  width: 90%;
+  margin: 4vh 10vw;
+  padding: 0%;
+  height: 20vh;
+
+  .bodyText {
+    width: 65%;
+  }
+
+  .img {
+    background: url("../../../../assets/images/notebook.png") no-repeat;
+    height: 100%;
+    width: 20%;
+    margin-left: 4%;
+  }
+}

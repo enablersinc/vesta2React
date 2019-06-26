@@ -1,10 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./components/App";
+import * as serviceWorker from "./serviceWorker";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+// import getMuiTheme from "@material-ui/styles/getMuiTheme";
+import themeConfig from "./utils/material.theme";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let MatThemeProvider = createMuiTheme(themeConfig);
+MatThemeProvider = responsiveFontSizes(MatThemeProvider);
+
+ReactDOM.render(
+  <MuiThemeProvider theme={MatThemeProvider}>
+    <App />
+  </MuiThemeProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
