@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.scss";
-import WorkspaceContainer from "./Onboarding/Workspace/WorkspaceContainer";
 import OnboardingContainer from "./Onboarding/OnboardingContainer";
 import "./App.scss";
+import RadioButtons from "./Onboarding/Organization/RadioButton";
+import WorkspaceContainer from "./Onboarding/Workspace/WorkspaceContainer";
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <WorkspaceContainer />
-      <OnboardingContainer />
     </div>
   );
 };

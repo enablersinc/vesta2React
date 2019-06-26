@@ -16,9 +16,13 @@ class AddWorkspaceManagers extends React.Component<MyProps> {
       <div>
         <h4 className={styles.heading}>{"WORKSPACE MANAGERS"}</h4>
         <div className={styles.div}>
-          <AddInput placeholder={"Invite Email"} Buttonlabel={"Add"} />
-          {this.invites.map(invite => {
-            return <DisplayField product={invite} />;
+          <AddInput placeholder={"Invite Email"} Buttonlabel={"Invite"} />
+          {this.invites.map((invite, index) => {
+            return (
+              <div key={index}>
+                <DisplayField product={invite} />
+              </div>
+            );
           })}
 
           <span className={styles.position}>

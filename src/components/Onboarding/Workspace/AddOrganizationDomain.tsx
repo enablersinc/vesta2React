@@ -17,8 +17,12 @@ class AddOrganizationDomain extends React.Component<MyProps> {
         <h4 className={styles.heading}>{"DOMAIN"}</h4>
         <div className={styles.div}>
           <AddInput placeholder={"Organization Domain"} Buttonlabel={"Add"} />
-          {this.domains.map(domain => {
-            return <DisplayField product={domain} />;
+          {this.domains.map((domain, index) => {
+            return (
+              <div key={index}>
+                <DisplayField product={domain} index={index} />
+              </div>
+            );
           })}
 
           <span className={styles.position}>
