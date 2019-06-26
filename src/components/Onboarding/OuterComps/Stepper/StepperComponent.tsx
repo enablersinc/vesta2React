@@ -108,8 +108,8 @@ const StepperComponent: React.FC = () => {
             <Grid
               container
               direction="column"
-              justify="center"
-              alignItems="center"
+              // justify="center"
+              // alignItems="center"
               spacing={1}
             >
               <Grid item xl={12}>
