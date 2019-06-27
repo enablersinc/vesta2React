@@ -1,3 +1,19 @@
+.stepperContent {
+  padding: 5% 10%;
+}
 .stepperButtons {
-  margin: 20% 7% 7% 7% !important;
+  margin: 10% 0% 5% 11%;
+
+  button {
+    padding: 0.5% 4%;
+    margin: 1%;
+  }
+
+  .back {
+    color: #3fbefc;
+    border: 1px solid #3fbefc;
+  }
+  .next {
+    color: #fff;
+  }
 }
