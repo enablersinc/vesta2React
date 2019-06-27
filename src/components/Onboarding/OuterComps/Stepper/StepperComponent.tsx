@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
-import StepLabel from "@material-ui/core/StepLabel";
+// import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import { Grid, StepButton } from "@material-ui/core";
 import "./StepperComponent.scss";
 import WorkspaceContainer from "../../Workspace/WorkspaceContainer";
 import OrganizationContainer from "../../Organization/OrganizationContainer";
@@ -60,6 +60,10 @@ const StepperComponent: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
+  const handleStep = (step: number) => () => {
+    setActiveStep(step);
+  };
+
   function handleNext() {
     setActiveStep(prevActiveStep => prevActiveStep + 1);
   }
@@ -74,21 +78,22 @@ const StepperComponent: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <Stepper activeStep={activeStep} alternativeLabel>
+      <Stepper activeStep={activeStep} alternativeLabel nonLinear>
         {steps.map((label, index) => {
-          const stepProps: { completed?: boolean } = {};
-          const labelProps: { optional?: React.ReactNode } = {};
+          // const stepProps: { completed?: boolean } = {};
+          // const labelProps: { optional?: React.ReactNode } = {};
 
           return (
-            <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>
-                {/* <StepIcon>
+            <Step key={label}>
+              <StepButton onClick={handleStep(index)}>{label}</StepButton>
+              {/* <StepLabel {...labelProps}>
+                <StepIcon>
                   <SvgIcon>
                     <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
                   </SvgIcon>
-                </StepIcon> */}
+                </StepIcon>
                 {label}
-              </StepLabel>
+              </StepLabel> */}
             </Step>
           );
         })}
@@ -102,8 +107,7 @@ const StepperComponent: React.FC = () => {
             <Button onClick={handleReset}>Reset</Button>
           </div>
         ) : (
-          <div className={"stepperButtons"}>
-            {/* <Typography className={classes.instructions} /> */}
+          <div className={"stepperContent"}>
             <Grid
               container
               direction="column"
@@ -116,11 +120,25 @@ const StepperComponent: React.FC = () => {
               </Grid>
             </Grid>
 
-            <div>
-              <Button disabled={activeStep === 0} onClick={handleBack}>
-                Back
-              </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
+            <div className={"stepperButtons"}>
+              {activeStep === 0 ? (
+                <Button onClick={handleReset} className={"back"}>Cancel</Button>
+              ) : (
+                <Button
+                  disabled={activeStep === 0}
+                  onClick={handleBack}
+                  className={"back"}
+                >
+                  Back
+                </Button>
+              )}
+
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={"next"}
+              >
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </Button>
             </div>

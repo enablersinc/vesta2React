@@ -1,5 +1,11 @@
 import React from "react";
-import { TextField, makeStyles, createStyles, Theme } from "@material-ui/core";
+import {
+  TextField,
+  makeStyles,
+  createStyles,
+  Theme,
+  Box
+} from "@material-ui/core";
 import clsx from "clsx";
 import "./WorkspaceFields.scss";
 const useStyles = makeStyles((theme: Theme) =>
@@ -10,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       // flexWrap: "wrap"
     },
     margin: {
-      margin: theme.spacing(1)
+      marginRight: theme.spacing(2)
     },
     textField: {
       flexBasis: 200
@@ -43,7 +49,7 @@ const WorkspaceFields: React.FC = () => {
   };
 
   return (
-    <div className="WorkspaceFields">
+    <Box className="WorkspaceFields" m={0} p={0}>
       <TextField
         id="outlined-adornment-weight"
         className={clsx(classes.margin, classes.textField)}
@@ -62,7 +68,7 @@ const WorkspaceFields: React.FC = () => {
         onChange={handleChange("weight")}
         InputProps={{}}
       />
-    </div>
+    </Box>
   );
 };
 
