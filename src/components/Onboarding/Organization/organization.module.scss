@@ -1,11 +1,14 @@
 .div {
+  flex-wrap: wrap;
+  justify-content: center;
   border: 1px solid #e8e8e8;
-  width: 40%;
+  width: 30%;
   height:300px;
-  padding: 12px;
 }
-.diva {
+.innerdiv {
   width: 100%;
+  flex:wrap;
+  justify-content: center
 }
 .leftdiv {
   width: 60%;
@@ -15,15 +18,28 @@
   width: 40%;
   float: right;
 }
-
+.inputleft{
+  width: 70%;
+  float: left;
+}
+.buttonright {
+  width: 30%;
+  float: right;
+}
 .position {
   float: right;
 }
 .d3 {
-  width: 50%;
+  width: 60%;
   float: left;
+  justify-content: center;
 }
 .d4 {
-  width: 50%;
+  width: 40%;
   float: right;
+  justify-content: center;
+}
+.field {
+  width: 300px;
+  font-size: 100px;
 }

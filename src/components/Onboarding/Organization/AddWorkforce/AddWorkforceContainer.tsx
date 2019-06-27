@@ -1,28 +1,20 @@
 import React from "react";
 import AddandCancelButton from "../../Workspace/reusableformfields/AddandCancel";
 import styles from "./AddWorkforce.module.scss";
-import InputField from "../shared/InputField";
+import InputField from "../AddWorkforce/InputField";
 import DropDown from "./Dropdown";
+import { Box } from '@material-ui/core';
 
 class AddWorkforceContainer extends React.Component {
   render() {
     return (
-      <div className={styles.div}>
-        <div>
-          <InputField placeholder={"Role Name"} />
-          <span className={styles.margins}>
-            <DropDown label={"Field Engineer"} />
-          </span>
+      <Box >
+        <div className={styles.div}>
+          <InputField placeholder={'Employee Email'}/>
+          <DropDown/>
+          
         </div>
-        <br />
-        <div>
-          <DropDown label={"Location"} />
-          <span className={styles.margins}>
-            <DropDown label={"Reports To"} />
-          </span>
-        </div>
-        <AddandCancelButton />
-      </div>
+      </Box>
     );
   }
 }

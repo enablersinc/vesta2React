@@ -13,16 +13,17 @@
 .div {
   border: 1px solid #e8e8e8;
   height: 230px;
-  width: 30%;
+  width:40%;
   padding: 10px;
 }
 .field {
-  width: 300px;
+  width: 350px;
   font-size: 300px;
 }
 .position {
-  line-height: 60px;
-  margin-left: 250px;
+  margin-top:200px;
+  margin-left: 300px;
+  
 }
 .textfield {
   margin-left: 10px;
@@ -31,6 +32,7 @@
 .outerdiv {
   flex-wrap: wrap;
 justify-content: center;
+flex-direction: row  
 }
 .leftdiv {
   width: 80%;

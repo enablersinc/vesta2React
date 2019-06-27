@@ -16,10 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
       // flexWrap: "wrap"
     },
     margin: {
-      marginRight: theme.spacing(2)
+      marginRight: theme.spacing(2),
+     
     },
     textField: {
-      flexBasis: 200
+      flexBasis: 200,
     }
   })
 );
@@ -58,6 +59,7 @@ const WorkspaceFields: React.FC = () => {
         value={values.weight}
         onChange={handleChange("weight")}
         InputProps={{}}
+        
       />
       <TextField
         id="outlined-adornment-weight"

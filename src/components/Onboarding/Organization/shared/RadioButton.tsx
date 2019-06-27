@@ -6,11 +6,11 @@ import Radio from "@material-ui/core/Radio";
 export default function RadioButtons() {
   const [value, setValue] = React.useState(true);
 
-  function handleChange(event: {
+  /*function handleChange(event: {
     target: { value: React.SetStateAction<boolean> };
   }) {
     setValue(event.target.value);
-  }
+  }*/
 
   return (
     <FormControl component="fieldset">
