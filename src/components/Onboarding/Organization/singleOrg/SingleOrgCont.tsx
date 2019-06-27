@@ -1,60 +1,69 @@
 import React from "react";
-import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import {
+  Box,
+  Select,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  OutlinedInput,
+  TextField
+} from "@material-ui/core";
+import "./SingleOrgCont.scss";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: "100%"
-    },
-    heading: {
-      fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular
-    }
-  })
-);
-
-const SingleOrgCont: React.FC = () => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <ExpansionPanel>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography className={classes.heading}>Expansion Panel 1</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      <ExpansionPanel>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Expansion Panel 2</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    </div>
-  );
+type myProps = {
+  source: {
+    name: string;
+    type: string;
+  };
 };
+const typeOptions = [
+  "CSP Service Provider",
+  "Service Provider A",
+  "Service Provider B",
+  "Service Provider C"
+];
+
+class SingleOrgCont extends React.Component<myProps> {
+  // constructor(props: myProps) {
+  //   super(props);
+  // }
+
+  logChange = (event: any) => {
+    event.preventDefault();
+    console.log(event.target.value);
+  };
+
+  render() {
+    const _data = this.props.source;
+    const _types = typeOptions;
+    return (
+      <div className={"fullWidth"}>
+        <Box width={100}>
+          <form autoComplete="off">
+            <TextField
+              select
+              variant="outlined"
+              value={_data.type}
+              onChange={this.logChange}
+              inputProps={{ name: "age", id: "outlined-age-simple" }}
+              className={"typeSelect"}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              {_types.map((val, i) => {
+                return (
+                  <MenuItem value={val} key={i}>
+                    {val}
+                  </MenuItem>
+                );
+              })}
+            </TextField>
+          </form>
+        </Box>
+      </div>
+    );
+  }
+}
 
 export default SingleOrgCont;

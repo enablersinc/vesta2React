@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
-// import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Grid, StepButton } from "@material-ui/core";
@@ -122,7 +121,9 @@ const StepperComponent: React.FC = () => {
 
             <div className={"stepperButtons"}>
               {activeStep === 0 ? (
-                <Button onClick={handleReset} className={"back"}>Cancel</Button>
+                <Button onClick={handleReset} className={"back"}>
+                  Cancel
+                </Button>
               ) : (
                 <Button
                   disabled={activeStep === 0}
