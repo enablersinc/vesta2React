@@ -25,7 +25,9 @@ class AddWorkspaceManagers extends React.Component<MyProps> {
               </span>
             );
           })}
+          
           <AddandCancelButton />
+         
         </div>
       </Box>
     );

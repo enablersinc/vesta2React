@@ -1,13 +1,14 @@
 .field {
-  width: 200px;
+  width: 100px;
   font-size: 300px;
 }
 .div {
+  display:flex;
   border: 1px solid #e8e8e8;
   height: 300px;
-  width: 35%;
-  overflow: auto;
+  width: 30%;
   padding: 10px;
+  justify-content:space-evenly
 }
 
 .margins {

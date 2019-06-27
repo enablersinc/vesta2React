@@ -7,6 +7,7 @@ type MyProps = {
 };
 class DeleteIconButton extends React.Component<MyProps> {
   render() {
+   
     return (
       <button
         style={{ background: "none", border: "none" }}
