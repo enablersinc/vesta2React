@@ -1,6 +1,6 @@
 import React from "react";
-import EditButtons from "./EditButtons";
-import styles from "../forms/styles.module.scss";
+import EditButtons from "./reusableformfields/EditButtons";
+import styles from "./forms/styles.module.scss";
 import { Box } from '@material-ui/core';
 
 type MyProps = {

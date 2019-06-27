@@ -6,7 +6,6 @@ import "./App.scss";
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Permissions />
     </div>
   );
 };

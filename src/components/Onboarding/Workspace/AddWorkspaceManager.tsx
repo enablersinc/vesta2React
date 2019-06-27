@@ -1,8 +1,8 @@
 import React from "react";
-import AddInput from "../reusableformfields/AddInput";
-import styles from "./styles.module.scss";
-import DisplayField from "../reusableformfields/DisplayField";
-import AddandCancelButton from "../reusableformfields/AddandCancel";
+import AddInput from "./reusableformfields/AddInput";
+import styles from "./forms/styles.module.scss";
+import DisplayField from "./reusableformfields/DisplayField"
+import AddandCancelButton from "./reusableformfields/AddandCancel";
 import { Box } from '@material-ui/core';
 
 type MyProps = {
