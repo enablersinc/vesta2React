@@ -1,9 +1,8 @@
 import React from "react";
-import AddInput from "./AddInput";
-import Buttons from "./PlainButton";
-import styles from "../styles.module.scss";
-import DisplayField from "./DisplayField";
-import AddandCancelButton from "./AddandCancel";
+import AddInput from "../reusableformfields/AddInput";
+import styles from "./styles.module.scss";
+import DisplayField from "../reusableformfields/DisplayField";
+import AddandCancelButton from "../reusableformfields/AddandCancel";
 
 type MyProps = {
   placeholder?: string;

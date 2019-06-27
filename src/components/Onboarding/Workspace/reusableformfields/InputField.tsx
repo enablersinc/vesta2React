@@ -1,6 +1,6 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import styles from "../styles.module.scss";
+import styles from "../forms/styles.module.scss";
 
 type MyProps = {
   placeholder?: string;

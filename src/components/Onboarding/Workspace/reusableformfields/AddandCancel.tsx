@@ -1,6 +1,6 @@
 import React from "react";
 import Buttons from "./PlainButton";
-import styles from "../styles.module.scss";
+import styles from "../forms/styles.module.scss";
 
 type MyProps = {
   label?: string;

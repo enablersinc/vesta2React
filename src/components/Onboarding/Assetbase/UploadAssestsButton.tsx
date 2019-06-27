@@ -1,5 +1,5 @@
 import React from "react";
-import Buttons from "../Workspace/PlainButton";
+import Buttons from "../Workspace/reusableformfields/PlainButton";
 import styles from "../styles.module.scss";
 
 type MyProps = {
