@@ -1,7 +1,7 @@
 import React from "react";
-import InputField from "../Workspace/InputField";
+import InputField from "../Workspace/reusableformfields/InputField";
 import styles from "./organization.module.scss";
-import Buttons from "../Workspace/PlainButton";
+import Buttons from "../Workspace/reusableformfields/PlainButton";
 import RadioButtons from "./RadioButton";
 import CheckboxesGroup from "./CheckboxesGroup";
 

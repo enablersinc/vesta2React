@@ -1,6 +1,6 @@
 import React from "react";
 import Permissions from "./Permissions";
-import AddandCancelButton from "../Workspace/AddandCancel";
+import AddandCancelButton from "../Workspace/reusableformfields/AddandCancel";
 import AddRole from "./AddRole";
 import styles from "./organization.module.scss";
 

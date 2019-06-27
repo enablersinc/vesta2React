@@ -1,5 +1,5 @@
 import React from "react";
-import AddandCancelButton from "../../Workspace/AddandCancel";
+import AddandCancelButton from "../../Workspace/reusableformfields/AddandCancel";
 import styles from "./AddWorkforce.module.scss";
 import InputField from "./InputField";
 import DropDown from "./Dropdown";

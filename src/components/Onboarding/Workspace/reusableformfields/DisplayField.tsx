@@ -1,6 +1,6 @@
 import React from "react";
 import EditButtons from "./EditButtons";
-import styles from "../styles.module.scss";
+import styles from "../forms/styles.module.scss";
 
 type MyProps = {
   product?: string;

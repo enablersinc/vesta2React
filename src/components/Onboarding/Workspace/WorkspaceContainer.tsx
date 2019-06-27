@@ -1,7 +1,7 @@
 import React from "react";
 import WorkspaceFields from "./Fields/WorkspaceFields";
-import AddOrganizationDomain from "./AddOrganizationDomain";
-import AddWorkspaceManagers from "./AddWorkspaceManager";
+import AddOrganizationDomain from "./forms/AddOrganizationDomain";
+import AddWorkspaceManagers from "./forms/AddWorkspaceManager";
 
 const WorkspaceContainer: React.FC = () => {
   return (

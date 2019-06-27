@@ -1,6 +1,6 @@
 import React from "react";
 import { SvgIcon } from "@material-ui/core";
-import styles from "../styles.module.scss";
+import styles from "../forms/styles.module.scss";
 
 type MyProps = {
   handleClick?(): void;

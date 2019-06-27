@@ -1,7 +1,7 @@
 import React from "react";
-import InputField from "./reusableformfields/InputField";
-import Buttons from "./reusableformfields/PlainButton";
-import styles from "../styles.module.scss";
+import InputField from "./InputField";
+import Buttons from "./PlainButton";
+import styles from "../forms/styles.module.scss";
 
 type MyProps = {
   placeholder?: string;
