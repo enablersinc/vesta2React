@@ -4,18 +4,19 @@ import styles from "../styles.module.scss";
 
 type MyProps = {
   product?: string;
+  index?: number;
 };
 
 class DisplayField extends React.Component<MyProps> {
   render() {
     return (
-      <div>
-        <div className={styles.diva}>
-          <div className={styles.d1}>{this.props.product}</div>
-          <div className={styles.d2}>
-            <EditButtons />
-          </div>
+      <div className={styles.outerdiv}>
+        <div className={styles.leftdiv} key={this.props.index}>
+          {this.props.product}
         </div>
+        <span className={styles.rightdiv}>
+          <EditButtons />
+        </span>
       </div>
     );
   }

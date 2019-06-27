@@ -4,22 +4,20 @@ import styles from "./styles.module.scss";
 
 type MyProps = {
   label?: string;
+  variant?: any;
   handleClick?(): void;
 };
 
 class Buttons extends React.Component<MyProps> {
   render() {
     return (
-      <span>
-        <Button
-          className="button1"
-          //variant="contained"
-          color="primary"
-          onClick={this.props.handleClick}
-        >
-          {this.props.label}
-        </Button>
-      </span>
+      <Button
+        variant={this.props.variant}
+        color="primary"
+        onClick={this.props.handleClick}
+      >
+        {this.props.label}
+      </Button>
     );
   }
 }

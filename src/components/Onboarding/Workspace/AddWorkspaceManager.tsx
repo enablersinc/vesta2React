@@ -3,6 +3,7 @@ import AddInput from "./AddInput";
 import Buttons from "./PlainButton";
 import styles from "../styles.module.scss";
 import DisplayField from "./DisplayField";
+import AddandCancelButton from "./AddandCancel";
 
 type MyProps = {
   placeholder?: string;
@@ -10,21 +11,22 @@ type MyProps = {
 };
 
 class AddWorkspaceManagers extends React.Component<MyProps> {
-  invites = ["john", "peter", "chris"];
+  invites = ["john@nokia.com", "peter@huawei.com", "chris@ericcson.com"];
   render() {
     return (
       <div>
         <h4 className={styles.heading}>{"WORKSPACE MANAGERS"}</h4>
         <div className={styles.div}>
-          <AddInput placeholder={"Invite Email"} Buttonlabel={"Add"} />
-          {this.invites.map(invite => {
-            return <DisplayField product={invite} />;
+          <AddInput placeholder={"Invite Email"} Buttonlabel={"Invite"} />
+          {this.invites.map((invite, index) => {
+            return (
+              <span key={index}>
+                <DisplayField product={invite} />
+              </span>
+            );
           })}
 
-          <span className={styles.position}>
-            <Buttons label={"Cancel"} />
-            <Buttons label={"Add"} />
-          </span>
+          <AddandCancelButton />
         </div>
       </div>
     );
