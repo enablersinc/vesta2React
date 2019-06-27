@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 
 type MyProps = {
   label?: string;
+  variant?: any;
   handleClick?(): void;
 };
 
@@ -11,7 +12,7 @@ class Buttons extends React.Component<MyProps> {
   render() {
     return (
       <Button
-        //variant="contained"
+        variant={this.props.variant}
         color="primary"
         onClick={this.props.handleClick}
       >

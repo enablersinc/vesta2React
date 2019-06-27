@@ -12,7 +12,7 @@ class AddandCancelButton extends React.Component<MyProps> {
     return (
       <span className={styles.position}>
         <Buttons label={"Cancel"} />
-        <Buttons label={"Add"} />
+        <Buttons label={"Add"} variant={"outlined"} />
       </span>
     );
   }

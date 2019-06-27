@@ -1,12 +1,19 @@
 .button {
   margin-left: 10px;
-  position: fixed;
+  position: absolute;
   margin-top: 10px;
+}
+.iconbutton {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #d0d0d0;
+  font-size: -2px;
 }
 
 .div {
   border: 1px solid #e8e8e8;
-  height: 200px;
+  height: 230px;
   width: 30%;
   overflow: auto;
   padding: 10px;
@@ -16,28 +23,28 @@
   font-size: 300px;
 }
 .position {
-  line-height: 40px;
+  line-height: 60px;
   margin-left: 250px;
 }
 .textfield {
   margin-left: 10px;
   width: 200px;
 }
-.diva {
+.outerdiv {
   padding: 12px;
 }
-.d1 {
+.leftdiv {
   width: 80%;
   float: left;
+  margin-bottom: 12px;
 }
-.d2 {
+.rightdiv {
   width: 20%;
   float: right;
 }
 
 .heading {
-  margin-bottom: 5px;
-}
-.icon {
-  font-size: 50px;
+  margin-bottom: 7px;
+  font-weight: 200;
+  color: grey;
 }

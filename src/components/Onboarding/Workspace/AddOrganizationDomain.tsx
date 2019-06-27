@@ -11,7 +11,7 @@ type MyProps = {
 };
 
 class AddOrganizationDomain extends React.Component<MyProps> {
-  domains = ["chair", "table", "sofa"];
+  domains = ["nokia", "siemens", "huawei"];
   render() {
     return (
       <div>

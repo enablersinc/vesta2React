@@ -11,7 +11,7 @@ type MyProps = {
 };
 
 class AddWorkspaceManagers extends React.Component<MyProps> {
-  invites = ["john", "peter", "chris"];
+  invites = ["john@nokia.com", "peter@huawei.com", "chris@ericcson.com"];
   render() {
     return (
       <div>

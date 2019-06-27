@@ -10,11 +10,11 @@ type MyProps = {
 class DisplayField extends React.Component<MyProps> {
   render() {
     return (
-      <div className={styles.diva}>
-        <div className={styles.d1} key={this.props.index}>
+      <div className={styles.outerdiv}>
+        <div className={styles.leftdiv} key={this.props.index}>
           {this.props.product}
         </div>
-        <span className={styles.d2}>
+        <span className={styles.rightdiv}>
           <EditButtons />
         </span>
       </div>
