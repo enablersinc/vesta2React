@@ -1,6 +1,5 @@
 import React from "react";
 import AddInput from "./AddInput";
-import Buttons from "./PlainButton";
 import styles from "../styles.module.scss";
 import DisplayField from "./DisplayField";
 import AddandCancelButton from "./AddandCancel";
@@ -10,18 +9,18 @@ type MyProps = {
   label?: string;
 };
 
-class AddOrganizationDomain extends React.Component<MyProps> {
-  domains = ["nokia", "siemens", "huawei"];
+class AddWorkspaceManagers extends React.Component<MyProps> {
+  invites = ["john@nokia.com", "peter@huawei.com", "chris@ericcson.com"];
   render() {
     return (
       <div>
-        <h4 className={styles.heading}>{"DOMAIN"}</h4>
+        <h4 className={styles.heading}>{"WORKSPACE MANAGERS"}</h4>
         <div className={styles.div}>
-          <AddInput placeholder={"Organization Domain"} Buttonlabel={"Add"} />
-          {this.domains.map((domain, index) => {
+          <AddInput placeholder={"Invite Email"} Buttonlabel={"Invite"} />
+          {this.invites.map((invite, index) => {
             return (
               <span key={index}>
-                <DisplayField product={domain} index={index} />
+                <DisplayField product={invite} />
               </span>
             );
           })}
@@ -33,4 +32,4 @@ class AddOrganizationDomain extends React.Component<MyProps> {
   }
 }
 
-export default AddOrganizationDomain;
+export default AddWorkspaceManagers;

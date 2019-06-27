@@ -1,9 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { SvgIcon } from "@material-ui/core";
 import styles from "../styles.module.scss";
-import { fontSize } from "@material-ui/system";
 
 type MyProps = {
   handleClick?(): void;

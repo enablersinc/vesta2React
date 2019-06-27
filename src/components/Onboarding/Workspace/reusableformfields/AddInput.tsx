@@ -1,6 +1,6 @@
 import React from "react";
-import InputField from "./InputField";
-import Buttons from "./PlainButton";
+import InputField from "./reusableformfields/InputField";
+import Buttons from "./reusableformfields/PlainButton";
 import styles from "../styles.module.scss";
 
 type MyProps = {
@@ -11,14 +11,14 @@ type MyProps = {
 class AddInput extends React.Component<MyProps> {
   render() {
     return (
-      <span>
-        <span>
+      <div>
+        <div>
           <InputField placeholder={this.props.placeholder} />
-        </span>
-        <span className={styles.button}>
+        </div>
+        <div className={styles.button}>
           <Buttons label={this.props.Buttonlabel} />
-        </span>
-      </span>
+        </div>
+      </div>
     );
   }
 }
