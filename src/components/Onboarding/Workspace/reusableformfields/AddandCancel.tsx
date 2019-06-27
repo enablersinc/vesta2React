@@ -1,7 +1,7 @@
 import React from "react";
 import Buttons from "./PlainButton";
 import styles from "../forms/styles.module.scss";
-import { Box } from '@material-ui/core';
+import { Box } from "@material-ui/core";
 
 type MyProps = {
   label?: string;
@@ -11,7 +11,7 @@ type MyProps = {
 class AddandCancelButton extends React.Component<MyProps> {
   render() {
     return (
-      <Box  className={styles.position}>
+      <Box mt={1} className={styles.buttondiv}>
         <Buttons label={"Cancel"} />
         <Buttons label={"Add"} variant={"outlined"} />
       </Box>

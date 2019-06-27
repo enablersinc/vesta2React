@@ -3,6 +3,7 @@ import AddInput from "../reusableformfields/AddInput";
 import styles from "./styles.module.scss";
 import DisplayField from "../reusableformfields/DisplayField";
 import AddandCancelButton from "../reusableformfields/AddandCancel";
+import { Box } from "@material-ui/core";
 
 type MyProps = {
   placeholder?: string;
@@ -16,15 +17,18 @@ class AddOrganizationDomain extends React.Component<MyProps> {
       <div>
         <h4 className={styles.heading}>{"DOMAIN"}</h4>
         <div className={styles.div}>
-          <AddInput placeholder={"Organization Domain"} Buttonlabel={"Add"} />
-          {this.domains.map((domain, index) => {
-            return (
-              <span key={index}>
-                <DisplayField product={domain} index={index} />
-              </span>
-            );
-          })}
-
+          <Box>
+            <AddInput placeholder={"Organization Domain"} Buttonlabel={"Add"} />
+          </Box>
+          <Box>
+            {this.domains.map((domain, index) => {
+              return (
+                <span key={index}>
+                  <DisplayField product={domain} />
+                </span>
+              );
+            })}
+          </Box>
           <AddandCancelButton />
         </div>
       </div>

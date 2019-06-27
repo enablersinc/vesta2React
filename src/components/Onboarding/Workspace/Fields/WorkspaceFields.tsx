@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../forms/styles.module.scss";
 import {
   TextField,
   makeStyles,
@@ -16,11 +17,11 @@ const useStyles = makeStyles((theme: Theme) =>
       // flexWrap: "wrap"
     },
     margin: {
-      marginRight: theme.spacing(2),
-     
+      marginRight: theme.spacing(3)
     },
     textField: {
-      flexBasis: 200,
+      flexBasis: "45%"
+      //width: "45%"
     }
   })
 );
@@ -50,7 +51,7 @@ const WorkspaceFields: React.FC = () => {
   };
 
   return (
-    <Box className="WorkspaceFields" m={0} p={0}>
+    <Box width="50%" className="WorkspaceFields" m={0} p={0}>
       <TextField
         id="outlined-adornment-weight"
         className={clsx(classes.margin, classes.textField)}
@@ -59,7 +60,6 @@ const WorkspaceFields: React.FC = () => {
         value={values.weight}
         onChange={handleChange("weight")}
         InputProps={{}}
-        
       />
       <TextField
         id="outlined-adornment-weight"

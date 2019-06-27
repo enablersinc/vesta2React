@@ -10,16 +10,13 @@ type MyProps = {
 class Buttons extends React.Component<MyProps> {
   render() {
     return (
-      
       <Button
-        
         variant={this.props.variant}
         color="primary"
         onClick={this.props.handleClick}
       >
         {this.props.label}
       </Button>
-      
     );
   }
 }

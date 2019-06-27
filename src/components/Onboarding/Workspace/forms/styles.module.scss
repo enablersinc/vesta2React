@@ -1,38 +1,32 @@
-.button {
-  margin-left: 10px;
-  margin-top: 50px;
-}
 .iconbutton {
   background: none;
   border: none;
   padding: 0;
   color: #d0d0d0;
-  font-size: -2px;
+  font-size: -3px;
+  :hover {
+    cursor: pointer;
+    border: #d0d0d0;
+  }
 }
 
 .div {
+  display: "flex";
   border: 1px solid #e8e8e8;
-  height: 230px;
-  width:40%;
+  height: auto;
+  min-height: 250px;
+  height: auto !important; /* for IE as it does not support min-height */
+  width: 50%;
   padding: 10px;
 }
 .field {
-  width: 350px;
-  font-size: 300px;
-}
-.position {
-  margin-top:200px;
-  margin-left: 300px;
-  
-}
-.textfield {
-  margin-left: 10px;
-  width: 200px;
+  width: 100%;
 }
 .outerdiv {
+  width: 100%;
   flex-wrap: wrap;
-justify-content: center;
-flex-direction: row  
+  justify-content: center;
+  flex-direction: row;
 }
 .leftdiv {
   width: 80%;
@@ -40,10 +34,14 @@ flex-direction: row
   margin-bottom: 12px;
 }
 .rightdiv {
-  width: 20%;
   float: right;
 }
-
+.buttondiv {
+  float: right;
+  //flex-wrap: nowrap;
+  display: "flex";
+  justify-content: "flex-end";
+}
 .heading {
   margin-bottom: 7px;
   font-weight: 200;
