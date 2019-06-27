@@ -1,6 +1,7 @@
 import React from "react";
 import EditButtons from "./EditButtons";
 import styles from "../styles.module.scss";
+import { Box } from '@material-ui/core';
 
 type MyProps = {
   product?: string;
@@ -11,12 +12,12 @@ class DisplayField extends React.Component<MyProps> {
   render() {
     return (
       <div className={styles.outerdiv}>
-        <div className={styles.leftdiv} key={this.props.index}>
+        <Box component="span" display="block" className={styles.leftdiv} key={this.props.index}>
           {this.props.product}
-        </div>
-        <span className={styles.rightdiv}>
+        </Box>
+        <Box component="span" display="block" className={styles.rightdiv}>
           <EditButtons />
-        </span>
+        </Box>
       </div>
     );
   }

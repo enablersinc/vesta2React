@@ -4,6 +4,7 @@ import Buttons from "./PlainButton";
 import styles from "../styles.module.scss";
 import DisplayField from "./DisplayField";
 import AddandCancelButton from "./AddandCancel";
+import { Box } from '@material-ui/core';
 
 type MyProps = {
   placeholder?: string;
@@ -14,7 +15,7 @@ class AddWorkspaceManagers extends React.Component<MyProps> {
   invites = ["john@nokia.com", "peter@huawei.com", "chris@ericcson.com"];
   render() {
     return (
-      <div>
+      <Box>
         <h4 className={styles.heading}>{"WORKSPACE MANAGERS"}</h4>
         <div className={styles.div}>
           <AddInput placeholder={"Invite Email"} Buttonlabel={"Invite"} />
@@ -25,10 +26,9 @@ class AddWorkspaceManagers extends React.Component<MyProps> {
               </span>
             );
           })}
-
           <AddandCancelButton />
         </div>
-      </div>
+      </Box>
     );
   }
 }

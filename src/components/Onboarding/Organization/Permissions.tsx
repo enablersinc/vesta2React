@@ -4,24 +4,25 @@ import styles from "./organization.module.scss";
 import Buttons from "../Workspace/PlainButton";
 import RadioButtons from "./RadioButton";
 import CheckboxesGroup from "./CheckboxesGroup";
+import { Box } from '@material-ui/core';
 
 class Permissions extends React.Component {
   render() {
     return (
-      <div>
+      <Box className={styles.div} >
         <p>Permissions:</p>
 
-        <div className={styles.innerdiv}>
-          <div className={styles.d1}>
+        <Box className={styles.innerdiv}>
+          <Box className={styles.d1}>
             <RadioButtons />
-          </div>
-          <div className={styles.d2}>
+          </Box>
+          <Box className={styles.d2}>
             <Buttons label={"Select"} />
             <Buttons label={"DeSelect All"} />
-          </div>
-        </div>
+          </Box>
+        </Box>
         <CheckboxesGroup />
-      </div>
+      </Box>
     );
   }
 }

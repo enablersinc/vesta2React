@@ -1,16 +1,17 @@
 .div {
   border: 1px solid #e8e8e8;
   width: 40%;
+  height:300px;
   padding: 12px;
 }
 .diva {
   width: 100%;
 }
-.d1 {
+.leftdiv {
   width: 60%;
   float: left;
 }
-.d2 {
+.rightdiv {
   width: 40%;
   float: right;
 }

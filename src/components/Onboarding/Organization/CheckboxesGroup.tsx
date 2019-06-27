@@ -6,6 +6,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import styles from "./organization.module.scss";
 import Checkbox from "@material-ui/core/Checkbox";
+import { Box } from '@material-ui/core';
 
 class CheckboxesGroup extends React.Component<any, any> {
   constructor(props: any) {
@@ -31,12 +32,15 @@ class CheckboxesGroup extends React.Component<any, any> {
   };*/
 
   render() {
+    let className=''
     return (
-      <div className={styles.d1}>
+      <Box className={styles.d1}>
         <FormControl component="fieldset">
           {this.state.permissions.map((permission: string, index: number) => {
             return (
               <FormGroup>
+            {index <=3 ? className= styles.leftdiv : styles.rightdiv}
+              <div className={className}>
                 <FormControlLabel
                   control={
                     <Checkbox
@@ -48,11 +52,13 @@ class CheckboxesGroup extends React.Component<any, any> {
                   }
                   label={permission}
                 />
-              </FormGroup>
-            );
-          })}
+              </div>
+    </FormGroup>
+          )})}
+
         </FormControl>
-      </div>
+        
+      </Box>
     );
   }
 }

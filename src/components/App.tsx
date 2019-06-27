@@ -10,7 +10,7 @@ import AddWorkforceContainer from "./Onboarding/Organization/AddWorkforce/AddWor
 const App: React.FC = () => {
   return (
     <div className="App">
-      <OnboardingContainer />
+      <Permissions />
     </div>
   );
 };
