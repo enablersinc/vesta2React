@@ -1,8 +1,7 @@
 import React from "react";
-import InputField from "../Workspace/reusableformfields/InputField";
-import styles from "./organization.module.scss";
-import Buttons from "../Workspace/reusableformfields/PlainButton";
-import RadioButtons from "./RadioButton";
+import styles from "../organization.module.scss";
+import Buttons from "../../Workspace/reusableformfields/PlainButton";
+import RadioButtons from "../shared/RadioButton";
 import CheckboxesGroup from "./CheckboxesGroup";
 import { Box } from '@material-ui/core';
 

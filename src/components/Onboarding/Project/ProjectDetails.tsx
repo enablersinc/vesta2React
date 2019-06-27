@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Project.module.scss";
-import InputField from "../Organization/AddWorkforce/InputField";
+import InputField from "../Organization/shared/InputField";
 import DropDown from "../Organization/AddWorkforce/Dropdown";
 
 type MyProps = {

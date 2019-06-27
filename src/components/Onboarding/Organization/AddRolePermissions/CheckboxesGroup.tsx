@@ -1,10 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import FormLabel from "@material-ui/core/FormLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import styles from "./organization.module.scss";
+import styles from "../organization.module.scss";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Box } from '@material-ui/core';
 

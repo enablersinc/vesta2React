@@ -1,7 +1,6 @@
 import React from "react";
-import InputField from "../Workspace/InputField";
-import SingleCheckbox from "./SingleCheckbox";
-import styles from "./organization.module.scss";
+import InputField from "../shared/InputField";
+
 
 type MyProps = {
   placeholder?: string;

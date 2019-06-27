@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import WelcomeAboard from "./OuterComps/WelcomeAboard/WelcomeAboard";
 import StepperComponent from "./OuterComps/Stepper/StepperComponent";
-import OnboardingHeader from "../Headers/OnboardingHeader/OnboardingHeader";
+import OnboardingHeader from '../NavHeaders/OnboardingHeader/OnboardingHeader';
 
 const OnboardingContainer: React.FC = () => {
   return (

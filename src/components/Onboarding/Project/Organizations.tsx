@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Project.module.scss";
-import SingleCheckbox from "../Organization/SingleCheckbox";
+import SingleCheckbox from "../Organization/shared/SingleCheckbox";
 import DropDown from "../Organization/AddWorkforce/Dropdown";
 
 type MyProps = {
