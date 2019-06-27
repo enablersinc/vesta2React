@@ -10,16 +10,13 @@ type MyProps = {
 class Buttons extends React.Component<MyProps> {
   render() {
     return (
-      <span>
-        <Button
-          className="button1"
-          //variant="contained"
-          color="primary"
-          onClick={this.props.handleClick}
-        >
-          {this.props.label}
-        </Button>
-      </span>
+      <Button
+        //variant="contained"
+        color="primary"
+        onClick={this.props.handleClick}
+      >
+        {this.props.label}
+      </Button>
     );
   }
 }

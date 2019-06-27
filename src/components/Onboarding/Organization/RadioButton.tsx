@@ -5,10 +5,10 @@ import FormControl from "@material-ui/core/FormControl";
 import Radio from "@material-ui/core/Radio";
 
 export default function RadioButtons() {
-  const [value, setValue] = React.useState("a");
+  const [value, setValue] = React.useState(true);
 
   function handleChange(event: {
-    target: { value: React.SetStateAction<string> };
+    target: { value: React.SetStateAction<boolean> };
   }) {
     setValue(event.target.value);
   }
