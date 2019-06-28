@@ -3,7 +3,7 @@ import OutlinedInput from "@material-ui/core/OutlinedInput";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-
+import styles from "./AddWorkforce.module.scss";
 type MyProps = {
   label?: string;
   //handleClick?(): void;
@@ -22,6 +22,7 @@ export default function DropDown(props: MyProps) {
       <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
         {props.label}
       </InputLabel>
+
       <Select
         native
         value={state.age}

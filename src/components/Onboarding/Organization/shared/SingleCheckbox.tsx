@@ -25,6 +25,7 @@ export default function CheckboxLabels(props: MyProps) {
             checked={state.checkedA}
             onChange={handleChange("checkedA")}
             value="checkedA"
+            style={{ width: 8, height: 8 }}
           />
         }
         label={props.label}

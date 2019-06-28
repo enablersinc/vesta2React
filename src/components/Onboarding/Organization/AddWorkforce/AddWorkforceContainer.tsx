@@ -1,19 +1,24 @@
 import React from "react";
-import AddandCancelButton from "../../Workspace/reusableformfields/AddandCancel";
 import styles from "./AddWorkforce.module.scss";
-import InputField from "../AddWorkforce/InputField";
-import DropDown from "./Dropdown";
-import { Box } from '@material-ui/core';
+import AddEmployeeDetails from "./AddEmployeeDetails.tsx";
+import DisplayEmployeeData from "./DisplayEmployeeData";
+import DisplayField from "../../Workspace/reusableformfields/DisplayField";
+import { Box } from "@material-ui/core";
 
 class AddWorkforceContainer extends React.Component {
+  invites = ["john@nokia.com", "peter@huawei.com", "chris@ericcson.com"];
+
   render() {
     return (
-      <Box >
-        <div className={styles.div}>
-          <InputField placeholder={'Employee Email'}/>
-          <DropDown/>
-          
-        </div>
+      <Box className={styles.div}>
+        <AddEmployeeDetails />
+        {this.invites.map((invite, index) => {
+          return (
+            <Box flexWrap="nowrap" className={styles.innerdiv}>
+              <DisplayEmployeeData product={invite} index={index} />
+            </Box>
+          );
+        })}
       </Box>
     );
   }

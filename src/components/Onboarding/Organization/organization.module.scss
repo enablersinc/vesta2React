@@ -1,29 +1,29 @@
 .div {
-  flex-wrap: wrap;
-  justify-content: center;
+  display: "flex";
   border: 1px solid #e8e8e8;
-  width: 30%;
-  height:300px;
+  height: auto;
+  min-height: 350px;
+  overflow: hidden;
+  //height: auto !important; /* for IE as it does not support min-height */
+  width: 40%;
+  padding: 1.5%;
 }
 .innerdiv {
   width: 100%;
-  flex:wrap;
-  justify-content: center
+  flex: wrap;
 }
 .leftdiv {
-  width: 60%;
-  float: left;
-}
-.rightdiv {
-  width: 40%;
-  float: right;
-}
-.inputleft{
   width: 70%;
   float: left;
 }
-.buttonright {
+.rightdiv {
   width: 30%;
+}
+.inputleft {
+  width: 60%;
+  float: left;
+}
+.buttonright {
   float: right;
 }
 .position {
@@ -40,6 +40,6 @@
   justify-content: center;
 }
 .field {
-  width: 300px;
+  width: 100%;
   font-size: 100px;
 }
