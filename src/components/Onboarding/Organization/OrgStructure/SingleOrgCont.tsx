@@ -1,19 +1,14 @@
 import React from "react";
-import {
-  Box,
-  Select,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  TextField
-} from "@material-ui/core";
+import { Box, MenuItem, TextField } from "@material-ui/core";
 import "./SingleOrgCont.scss";
+import HierarchyTree from "./HierarchyTree/HierarchyTree";
 
 type myProps = {
-  source: {
+  organization: {
     name: string;
     type: string;
+    orgHierarchy: Array<any>;
+    workforce: Array<Object>;
   };
 };
 const typeOptions = [
@@ -34,7 +29,7 @@ class SingleOrgCont extends React.Component<myProps> {
   };
 
   render() {
-    const _data = this.props.source;
+    const _data = this.props.organization;
     const _types = typeOptions;
     return (
       <div className={"fullWidth"}>
@@ -60,6 +55,9 @@ class SingleOrgCont extends React.Component<myProps> {
               })}
             </TextField>
           </form>
+        </Box>
+        <Box>
+          <HierarchyTree hierarchyTree={_data.orgHierarchy} />
         </Box>
       </div>
     );
