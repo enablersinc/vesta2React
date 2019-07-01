@@ -2,7 +2,7 @@
   display: "flex";
   border: 1px solid #e8e8e8;
   height: auto;
-  min-height: 350px;
+  min-height: 300px;
   overflow: hidden;
   //height: auto !important; /* for IE as it does not support min-height */
   width: 40%;
@@ -18,10 +18,11 @@
 }
 
 .rightdiv {
+  width: 50%;
   float: right;
 }
 .field {
-  width: 100%;
+  width: 81%;
 }
 
 .inputdivs {
@@ -31,4 +32,17 @@
 
 .buttonsdiv {
   float: right;
+}
+.fullWidth {
+  width: 90% !important;
+}
+
+.typeSelect {
+  width: 20vw !important;
+}
+
+h4 {
+  margin-bottom: 7px;
+  font-weight: 200;
+  color: grey;
 }

@@ -1,36 +1,28 @@
 import React from "react";
 import AddandCancelButton from "../../Workspace/reusableformfields/AddandCancel";
 import styles from "./AddWorkforce.module.scss";
-import InputField from "../AddWorkforce/InputField";
+import InputField from "../shared/InputField";
 import DropDown from "./Dropdown";
-import {
-  Box,
-  Select,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  TextField
-} from "@material-ui/core";
+import { Box } from "@material-ui/core";
 class AddWorkforceContainer extends React.Component {
   render() {
     return (
-      <Box>
+      <div>
         <Box display="flex" className={styles.innerdiv}>
-          <Box flexDirection="start" className={styles.leftdiv}>
+          <Box className={styles.leftdiv}>
             <Box>
               <InputField placeholder={"Employee Email"} />
             </Box>
-            <Box className={styles.field} mt={3}>
+            <Box width="100%" flexWrap="nowrap" className={styles.field} mt={3}>
               {" "}
               <DropDown label={"Location"} />
             </Box>
           </Box>
-          <Box flexDirection="end" className={styles.rightdiv}>
+          <Box className={styles.rightdiv}>
             <Box width="100%" className={styles.field} ml={6}>
               <DropDown label={"Role"} />
             </Box>
-            <Box ml={6} mt={3.5}>
+            <Box width="100%" ml={6} mt={3}>
               {" "}
               <DropDown label={"Reports To"} />
             </Box>
@@ -39,7 +31,7 @@ class AddWorkforceContainer extends React.Component {
         <Box mt={2} mr={3}>
           <AddandCancelButton />
         </Box>
-      </Box>
+      </div>
     );
   }
 }

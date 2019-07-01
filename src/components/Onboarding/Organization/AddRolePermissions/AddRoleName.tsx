@@ -1,5 +1,5 @@
 import React from "react";
-import InputField from "../shared/InputField";
+import InputField from "./InputField";
 import { Box } from "@material-ui/core";
 import SingleCheckBox from "../shared/SingleCheckbox";
 import styles from "../organization.module.scss";

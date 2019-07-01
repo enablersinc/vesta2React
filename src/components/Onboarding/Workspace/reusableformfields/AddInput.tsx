@@ -1,8 +1,6 @@
 import React from "react";
 import InputField from "./InputField";
 import Buttons from "./PlainButton";
-import styles from "../forms/styles.module.scss";
-import { spacing } from "@material-ui/system";
 import { Box } from "@material-ui/core";
 
 type MyProps = {

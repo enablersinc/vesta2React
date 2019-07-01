@@ -5,7 +5,7 @@
   min-height: 350px;
   overflow: hidden;
   //height: auto !important; /* for IE as it does not support min-height */
-  width: 40%;
+  width: 45%;
   padding: 1.5%;
 }
 .innerdiv {
@@ -24,6 +24,7 @@
   float: left;
 }
 .buttonright {
+  width: 40%;
   float: right;
 }
 .position {

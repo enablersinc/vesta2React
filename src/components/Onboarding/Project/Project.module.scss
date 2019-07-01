@@ -1,0 +1,22 @@
+.div {
+  display: "flex";
+  border: 1px solid #e8e8e8;
+  height: auto;
+  min-height: 500px;
+  height: auto !important; /* for IE as it does not support min-height */
+  width: 40%;
+  padding: 10px;
+}
+
+.outerdiv {
+  width: 100%;
+}
+
+.leftdiv {
+  width: 50%;
+  float: left;
+}
+.rightdiv {
+  width: 50%;
+  float: right;
+}

@@ -17,7 +17,7 @@ class Permissions extends React.Component {
           <Box className={styles.inputleft}>
             <RadioButtons />
           </Box>
-          <Box justifyContent="flex-end" className={styles.buttonright}>
+          <Box className={styles.buttonright}>
             <Buttons label={"Select All"} />
             <Buttons label={"DeSelect All"} />
           </Box>

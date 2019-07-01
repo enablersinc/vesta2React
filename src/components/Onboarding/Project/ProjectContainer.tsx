@@ -1,9 +1,11 @@
 import React from "react";
+import styles from "./Project.module.scss";
+import ProjectDetails from "./ProjectDetails";
 
 const ProjectContainer: React.FC = () => {
   return (
-    <div className="ProjectContainer">
-      <p>ProjectContainer</p>
+    <div className={styles.div}>
+      <ProjectDetails />
     </div>
   );
 };
